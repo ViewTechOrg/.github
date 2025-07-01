@@ -3,12 +3,11 @@ name: Update Popular Projects
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # Berjalan setiap jam
+    - cron: '0 * * * *'
 
 jobs:
   update:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
 
@@ -18,7 +17,6 @@ jobs:
         with:
           fetch-depth: 0
 
-
       - name: Update Popular Repos Section
         uses: theboi/github-update-readme@v1.3.0
         with:
@@ -26,7 +24,6 @@ jobs:
           subhead: "Berikut adalah repository kami yang populer:"
           footer: ""
           customReadmeFile: profile/README.md
-          sectionName: "github-popular-repos"
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
 
@@ -34,5 +31,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: Update popular repositories section"
-          # Tentukan file yang harus dipantau perubahannya.
           file_pattern: profile/README.md
