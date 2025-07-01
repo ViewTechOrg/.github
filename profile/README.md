@@ -76,6 +76,8 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 ---
 
 ## 📈 Statistik Organisasi
+<!--ORG_STATS_START-->
+<!--ORG_STATS_END-->
 
 ---
 
