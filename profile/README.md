@@ -58,11 +58,11 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 
 ## 📊 Proyek Unggulan
 
-<!-- PROJECTS START -->
+<!--START_SECTION:github-popular-repos-->
 ### 🔝 Top Repos
 
 ### 🔧 Trust‑YourCam
-- Alat pentesting untuk **camera phishing** via social-engineering :contentReference[oaicite:8]{index=8}  
+- Alat pentesting untuk **camera phishing** via social-engineering  
 - Teknologi: Shell, HTML/CSS/JS, PHP, Node.js  
 - Fitur: link generator, IP lookup, auto-capture image, device detection
 
@@ -71,7 +71,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 - Teknologi: Shell, Python
 - Fitur: Crack, login via lates app pinning   
 
-<!-- PROJECTS END -->
+<!--END_SECTION:github-popular-repos-->
 
 ---
 
