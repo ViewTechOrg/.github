@@ -1,0 +1,20 @@
+name: Update Projects Section
+
+on:
+  schedule:
+    - cron: '0 * * * *' # setiap jam
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: theboi/github-update-readme@v1.3
+        with:
+          header: "## 📊 Proyek Unggulan"
+          subhead: "Berikut adalah repository kami Populer"
+          footer: ""
+          customReadmeFile: README.md
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
