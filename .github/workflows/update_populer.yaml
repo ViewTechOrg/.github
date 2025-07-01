@@ -1,4 +1,4 @@
-name: Update Projects Section
+name: Update Popular Projects
 
 on:
   schedule:
@@ -8,13 +8,19 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: theboi/github-update-readme@v1.3
+      - name: Checkout Full Repo
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Update Popular Repos Section
+        uses: theboi/github-update-readme@v1.3
         with:
           header: "## 📊 Proyek Unggulan"
-          subhead: "Berikut adalah repository kami Populer"
+          subhead: "Berikut adalah repository kami yang populer:"
           footer: ""
-          customReadmeFile: README.md
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          customReadmeFile: .github/profile/README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
