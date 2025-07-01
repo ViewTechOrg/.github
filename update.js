@@ -16,7 +16,7 @@ async function run() {
     // Konfigurasi
     const ORG_NAME = 'ViewTechOrg';
     const REPO_LIMIT = 3;
-    const README_PATH = path.join(process.env.GITHUB_WORKSPACE, 'README.md');
+    const README_PATH = path.join(process.env.GITHUB_WORKSPACE, 'profile/README.md');
     const START_TAG = '<!--START_SECTION:top-repos-->';
     const END_TAG = '<!--END_SECTION:top-repos-->';
 
