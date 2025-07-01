@@ -18,6 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
+
       - name: Update Popular Repos Section
         uses: theboi/github-update-readme@v1.3.0
         with:
@@ -25,6 +26,7 @@ jobs:
           subhead: "Berikut adalah repository kami yang populer:"
           footer: ""
           customReadmeFile: profile/README.md
+          sectionName: "github-popular-repos"
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
 
