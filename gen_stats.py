@@ -1,7 +1,7 @@
 import requests
 
 ORG_NAME = "ViewTechOrg"
-README_PATH = ".github/profile/README.md"
+README_PATH = "profile/README.md"
 START_TAG = "<!--ORG_STATS_START-->"
 END_TAG = "<!--ORG_STATS_END-->"
 
