@@ -52,7 +52,7 @@ jobs:
 
       - name: Update README
         run: |
-          sed -i '/<!--ORG_STATS_START-->/, /<!--ORG_STATS_END-->/c\$(cat org_stats.md)' README.md
+          sed -i '/<!--ORG_STATS_START-->/, /<!--ORG_STATS_END-->/c\$(cat org_stats.md)' profile/README.md
 
       - name: Commit & Push
         run: |
