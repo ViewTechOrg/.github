@@ -2,7 +2,7 @@ name: Update Popular Projects
 
 on:
   schedule:
-    - cron: '0 * * * *' # setiap jam
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Update Popular Repos Section
-        uses: theboi/github-update-readme@v1.3
+        uses: theboi/github-update-readme@v1.2.2
         with:
           header: "## 📊 Proyek Unggulan"
           subhead: "Berikut adalah repository kami yang populer:"
