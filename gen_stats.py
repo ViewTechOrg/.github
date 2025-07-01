@@ -16,7 +16,7 @@ def fetch_org_data(org):
     repos = requests.get(f"https://api.github.com/orgs/{org}/repos?per_page=100", headers=headers).json()
     members = requests.get(f"https://api.github.com/orgs/{org}/members", headers=headers).json()
 
-    total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+    total_stars = sum(repos.get("stargazers_count", 0) for r in repos)
     top_repo = sorted(repos, key=lambda x: x.get("stargazers_count", 0), reverse=True)[:3]
 
     return {
