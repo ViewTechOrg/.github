@@ -5,7 +5,7 @@
 </p>
 
 
-A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan **R&D** melalui dua divisi utama:
+A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan **R&D** melalui tiga divisi utama:
 
 - **Viewtech.Lab** – Developer Tools Dan Pengujian.
 - **Viewtech.Sec** – Pengembangan Keamanan Obfuscate etc.
