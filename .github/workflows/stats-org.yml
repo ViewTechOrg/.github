@@ -34,7 +34,8 @@ jobs:
       # 4. Jalankan skrip Python untuk menghasilkan file statistik
       - name: Generate Org Stats
         run: python gen_stats.py
-
+        env:
+          TOKEN: ${{ secrets.PAT }}
       # 5. Inject statistik ke file README.md
       #    Perintah sed ini sudah benar untuk mengganti konten di antara marker
       - name: Inject stats into README
