@@ -15,17 +15,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Update top repos section
-        uses: ts-actions/top-repos@v1
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.PAT }}
-          user: ViewTechOrg
-          mode: org
-          limit: 3
-          sort_by: stars
-          sort_direction: desc
-          output_path: profile/README.md
-          block_identifier: top-repos
+          node-version: '20'
+
+      - name: Install Dependencies
+        run: npm install @actions/core @actions/github
+
+      - name: Run script to update README
+        run: node update_readme.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT }}
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
