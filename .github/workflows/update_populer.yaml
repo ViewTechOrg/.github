@@ -14,18 +14,18 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
-      - name: Update Popular Repos Section
-        uses: theboi/github-update-readme@v1.3.0
+      - name: Update top repos section
+        uses: ts-actions/top-repos@v1
         with:
-          header: "## 📊 Proyek Unggulan"
-          subhead: "Berikut adalah repository kami yang populer:"
-          footer: ""
-          customReadmeFile: profile/README.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          github_token: ${{ secrets.PAT }}
+          user: ViewTechOrg
+          mode: org
+          limit: 3
+          sort_by: stars
+          sort_direction: desc
+          output_path: profile/README.md
+          block_identifier: top-repos
 
       - name: Commit and Push changes
         uses: stefanzweifel/git-auto-commit-action@v5
