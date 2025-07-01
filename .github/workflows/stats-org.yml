@@ -3,7 +3,7 @@ name: Update Org Stats
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *" # setiap jam
+    - cron: "0 * * * *"
 
 jobs:
   update-readme:
@@ -33,6 +33,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git pull --rebase origin main || true  # ⬅️ WAJIB
+
           git add .
           git commit -m "Update Org Stats" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/ViewTechOrg/.github.git HEAD:main
