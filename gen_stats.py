@@ -5,7 +5,7 @@ import sys
 # Konfigurasi
 ORG_NAME = "ViewTechOrg"
 OUTPUT_FILENAME = "org_stats.md"
-GITHUB_TOKEN = os.environ.get("PAT")
+GITHUB_TOKEN = os.environ.get("TOKEN")
 
 def make_api_request(url):
     """Membuat permintaan ke API GitHub dengan header yang benar dan penanganan error."""
