@@ -1,41 +1,58 @@
+# .github/workflows/update-stats.yml
+
 name: Update Org Stats
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 * * * *"
+    - cron: "0 * * * *" # Berjalan setiap jam
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
+    
+    # Berikan izin kepada job ini untuk menulis ke isi repositori
+    # Ini adalah langkah krusial agar bisa melakukan push
+    permissions:
+      contents: write
 
+    steps:
+      # 1. Checkout kode repositori
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Setup environment Python
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
 
-      - name: Install requests
+      # 3. Install dependency (jika ada lebih dari satu, lebih baik gunakan requirements.txt)
+      - name: Install dependencies
         run: pip install requests
 
+      # 4. Jalankan skrip Python untuk menghasilkan file statistik
       - name: Generate Org Stats
         run: python gen_stats.py
 
-      - name: Inject to README
+      # 5. Inject statistik ke file README.md
+      #    Perintah sed ini sudah benar untuk mengganti konten di antara marker
+      - name: Inject stats into README
         run: |
-          sed -i '/<!--ORG_STATS_START-->/,/<!--ORG_STATS_END-->/{
+          sed -i '//,//{
           r org_stats.md
           d
           }' profile/README.md
 
-      - name: Commit and Push
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-
-          git pull --rebase origin main || true
-
-          git add profile/README.md
-          git commit -m "Update Org Stats" || echo "No changes to commit"
-          git push https://x-access-token:${{ secrets.PAT }}@github.com/ViewTechOrg/.github.git HEAD:main
+      # 6. Commit dan Push perubahan secara otomatis
+      #    Menggunakan action yang sudah teruji untuk menyederhanakan proses
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: Update Org Stats"
+          file_pattern: profile/README.md
+          # Action ini akan secara otomatis:
+          # - Mengkonfigurasi git user
+          # - Mengecek apakah ada perubahan pada file yang ditentukan (file_pattern)
+          # - Melakukan 'add', 'commit', dan 'push' jika ada perubahan
+          # - Tidak melakukan apa-apa (dan tidak error) jika tidak ada perubahan
