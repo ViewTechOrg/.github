@@ -16,7 +16,7 @@ jobs:
           fetch-depth: 0
 
       - name: Update Popular Repos Section
-        uses: theboi/github-update-readme@v1
+        uses: theboi/github-update-readme@v1.3.0
         with:
           header: "## 📊 Proyek Unggulan"
           subhead: "Berikut adalah repository kami yang populer:"
