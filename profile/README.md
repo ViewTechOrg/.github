@@ -58,20 +58,8 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 
 ## 📊 Proyek Unggulan
 
-<!--START_SECTION:github-popular-repos-->
-### 🔝 Top Repos
-
-### 🔧 Trust‑YourCam
-- Alat pentesting untuk **camera phishing** via social-engineering  
-- Teknologi: Shell, HTML/CSS/JS, PHP, Node.js  
-- Fitur: link generator, IP lookup, auto-capture image, device detection
-
-### 📱 Crack‑IG
-- Tool bruteforce Instagram (Brute‑Force attack) :contentReference[oaicite:9]{index=9}  
-- Teknologi: Shell, Python
-- Fitur: Crack, login via lates app pinning   
-
-<!--END_SECTION:github-popular-repos-->
+<!--START_SECTION:top-repos-->
+<!--END_SECTION:top-repos-->
 
 ---
 
