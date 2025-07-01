@@ -36,6 +36,6 @@ jobs:
 
           git pull --rebase origin main || true
 
-          git add .
+          git add profile/README.md
           git commit -m "Update Org Stats" || echo "No changes to commit"
           git push https://x-access-token:${{ secrets.PAT }}@github.com/ViewTechOrg/.github.git HEAD:main
