@@ -2,7 +2,7 @@ name: Update Org Stats
 
 on:
   schedule:
-    - cron: "0 */6 * * *"  # setiap 6 jam
+    - cron: "0 */6 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Python
         uses: actions/setup-python@v4
         with:
@@ -26,17 +27,15 @@ jobs:
           ORG = "ViewTechOrg"
           headers = {"Accept": "application/vnd.github+json"}
 
-          # Get org repos
-          repos = requests.get(f"https://api.github.com/orgs/{ORG}/repos?per_page=100", headers=headers).json()
-          stars = sum(repo["stargazers_count"] for repo in repos)
-          forks = sum(repo["forks_count"] for repo in repos)
+          repos = requests.get(f"https://api.github.com/orgs/{ORG}/repos?per_page=100").json()
+          stars = sum(r.get("stargazers_count", 0) for r in repos)
+          forks = sum(r.get("forks_count", 0) for r in repos)
           total_repos = len(repos)
 
-          # Get members
-          members = requests.get(f"https://api.github.com/orgs/{ORG}/members", headers=headers).json()
+          members = requests.get(f"https://api.github.com/orgs/{ORG}/members").json()
           total_members = len(members)
 
-          stats_md = f"""\
+          md = f'''<!--ORG_STATS_START-->
 📊 **Statistik ViewTechOrg (Live)**
 
 - 🔧 Total Repos: `{total_repos}`
@@ -44,20 +43,23 @@ jobs:
 - 🍴 Total Forks: `{forks}`
 - 👥 Anggota Terdaftar: `{total_members}`
 - 📦 Bahasa Dominan: `Shell`, `Python`
-"""
+<!--ORG_STATS_END-->'''
 
           with open("org_stats.md", "w") as f:
-              f.write("<!--ORG_STATS_START-->\n" + stats_md + "\n<!--ORG_STATS_END-->")
+              f.write(md)
           EOF
 
-      - name: Update README
+      - name: Inject into README
         run: |
-          sed -i '/<!--ORG_STATS_START-->/, /<!--ORG_STATS_END-->/c\$(cat org_stats.md)' profile/README.md
+          sed -i '/<!--ORG_STATS_START-->/, /<!--ORG_STATS_END-->/{
+            r org_stats.md
+            d
+          }' .github/profile/README.md
 
-      - name: Commit & Push
+      - name: Commit and Push
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add README.md
+          git add .github/profile/README.md
           git commit -m "update: org stats"
           git push
