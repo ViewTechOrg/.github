@@ -21,6 +21,6 @@ jobs:
           header: "## 📊 Proyek Unggulan"
           subhead: "Berikut adalah repository kami yang populer:"
           footer: ""
-          customReadmeFile: .github/profile/README.md
+          customReadmeFile: profile/README.md
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT }}
