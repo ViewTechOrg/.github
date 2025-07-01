@@ -1,10 +1,14 @@
 import requests
 import os
 import sys
+import re
 
-# Konfigurasi
+# --- Konfigurasi --
 ORG_NAME = "ViewTechOrg"
-OUTPUT_FILENAME = "org_stats.md"
+README_PATH = "profile/README.md"
+START_TAG = "<!--ORG_STATS_START-->"
+END_TAG = "<!--ORG_STATS_END-->"
+
 GITHUB_TOKEN = os.environ.get("TOKEN")
 
 def make_api_request(url):
@@ -27,7 +31,8 @@ def fetch_paginated_data(url):
     results = []
     page = 1
     while True:
-        paginated_url = f"{url}?per_page=100&page={page}"
+        # Menambahkan parameter paginasi ke URL
+        paginated_url = f"{url}{'?' if '?' not in url else '&'}per_page=100&page={page}"
         data = make_api_request(paginated_url)
         if not data:
             break
@@ -35,33 +40,23 @@ def fetch_paginated_data(url):
         page += 1
     return results
 
-# --- Fungsi Utama ---
 def generate_org_stats():
     """Mengambil data organisasi, memproses, dan menghasilkan konten markdown."""
     print(f"Memulai pengambilan data untuk organisasi: {ORG_NAME}...")
 
-    # 1. Ambil data dasar organisasi
     org_data = make_api_request(f"https://api.github.com/orgs/{ORG_NAME}")
-    # 2. Ambil semua repositori (dengan paginasi)
     print("Mengambil data repositori...")
-    repos = fetch_paginated_data(f"https://api.github.com/orgs/{ORG_NAME}/repos")
-    
-    # Pastikan 'repos' adalah list sebelum diproses lebih lanjut
+    repos = fetch_paginated_data(org_data['repos_url'])
+    print("Mengambil data anggota...")
+    members = fetch_paginated_data(f"https://api.github.com/orgs/{ORG_NAME}/members")
+
     if not isinstance(repos, list):
         print(f"Error: Data repositori yang diterima bukan list. Data: {repos}", file=sys.stderr)
         sys.exit(1)
 
-    # 3. Ambil semua anggota (dengan paginasi)
-    print("Mengambil data anggota...")
-    members = fetch_paginated_data(f"https://api.github.com/orgs/{ORG_NAME}/members")
-
-    # 4. Hitung statistik
     total_stars = sum(repo.get("stargazers_count", 0) for repo in repos)
-    
-    # Urutkan repositori berdasarkan jumlah bintang dan ambil 3 teratas
     top_repos = sorted(repos, key=lambda r: r.get("stargazers_count", 0), reverse=True)[:3]
 
-    # 5. Bangun konten Markdown
     print("Membangun konten statistik...")
     lines = [
         f"- 🔭 **Total Proyek Publik**: {org_data.get('public_repos', 0)}",
@@ -75,17 +70,37 @@ def generate_org_stats():
     
     return "\n".join(lines)
 
-# --- Eksekusi Skrip ---
+def inject_stats_into_readme(stats_content):
+    """Menyisipkan konten statistik ke dalam file README di antara tag yang ditentukan."""
+    try:
+        with open(README_PATH, "r", encoding="utf-8") as f:
+            readme_content = f.read()
+    except FileNotFoundError:
+        print(f"Error: File README tidak ditemukan di '{README_PATH}'", file=sys.stderr)
+        sys.exit(1)
+
+    # Gunakan regex untuk mengganti konten di antara tag secara aman
+    # re.DOTALL membuat '.' cocok dengan newline, penting untuk blok multiline
+    pattern = re.compile(f"({re.escape(START_TAG)})(.*?)({re.escape(END_TAG)})", re.DOTALL)
+    
+    if not pattern.search(readme_content):
+        print(f"Error: Tag '{START_TAG}' atau '{END_TAG}' tidak ditemukan di README.", file=sys.stderr)
+        sys.exit(1)
+
+    # Bangun konten baru: start_tag + baris baru + statistik + baris baru + end_tag
+    replacement_text = f"\\1\n{stats_content}\n\\3"
+    
+    new_readme_content = pattern.sub(replacement_text, readme_content)
+
+    with open(README_PATH, "w", encoding="utf-8") as f:
+        f.write(new_readme_content)
+    
+    print(f"Statistik berhasil disisipkan ke dalam '{README_PATH}'")
+
 if __name__ == "__main__":
     if not GITHUB_TOKEN:
         print("Error: GITHUB_TOKEN tidak ditemukan. Pastikan workflow memiliki izin yang benar.", file=sys.stderr)
         sys.exit(1)
 
-    stats_content = generate_org_stats()
-    
-    # Tulis konten ke file output. Workflow akan menggunakan file ini.
-    with open(OUTPUT_FILENAME, "w", encoding="utf-8") as f:
-        f.write(stats_content)
-        
-    print(f"Statistik berhasil dibuat dan disimpan di '{OUTPUT_FILENAME}'")
-
+    stats_content = generate_org_stats()    
+    inject_stats_into_readme(stats_content)
