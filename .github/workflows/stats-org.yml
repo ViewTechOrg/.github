@@ -36,14 +36,6 @@ jobs:
         run: python gen_stats.py
         env:
           TOKEN: ${{ secrets.PAT }}
-      # 5. Inject statistik ke file README.md
-      #    Perintah sed ini sudah benar untuk mengganti konten di antara marker
-      - name: Inject stats into README
-        run: |
-          sed -i '//,//{
-          r org_stats.md
-          d
-          }' profile/README.md
 
       # 6. Commit dan Push perubahan secara otomatis
       #    Menggunakan action yang sudah teruji untuk menyederhanakan proses
