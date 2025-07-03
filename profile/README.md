@@ -84,9 +84,9 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Pyramid-Obfv5" target="_blank"><b>Pyramid-Obfv5</b></a> (⭐ 2)
+      <a href="https://github.com/ViewTechOrg/Checker-Scammer" target="_blank"><b>Checker-Scammer</b></a> (⭐ 4)
       <br>
-      Encryption V5 Pyramid Tech
+      a tool that functions to detect scammers based on telephone number analysis from the total number of markers
     </td>
   </tr>
 </table>
