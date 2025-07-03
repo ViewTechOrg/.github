@@ -86,7 +86,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
     <td>
       <a href="https://github.com/ViewTechOrg/Pyramid-Obfv5" target="_blank"><b>Pyramid-Obfv5</b></a> (⭐ 2)
       <br>
-      Tidak ada deskripsi.
+      Encryption V5 Pyramid Tech
     </td>
   </tr>
 </table>
