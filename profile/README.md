@@ -96,7 +96,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 
 ## 📈 Statistik Organisasi
 <!--ORG_STATS_START-->
-- 🔭 **Total Proyek Publik**: 10
+- 🔭 **Total Proyek Publik**: 11
 - 👥 **Jumlah Anggota**: 8
 - 🌟 **Total Bintang di Semua Proyek**: 26
 
