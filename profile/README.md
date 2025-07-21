@@ -103,7 +103,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 ## 📈 Statistik Organisasi
 <!--ORG_STATS_START-->
 - 🔭 **Total Proyek Publik**: 12
-- 👥 **Jumlah Anggota**: 8
+- 👥 **Jumlah Anggota**: 9
 - 🌟 **Total Bintang di Semua Proyek**: 28
 
 ### 🚀 Top 3 Repositori dengan Bintang Terbanyak:
