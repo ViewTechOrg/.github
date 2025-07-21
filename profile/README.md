@@ -1,4 +1,4 @@
-<h2 align="center">⚡ ViewTechOrg</h2>
+<p align="center"><a href="https://stardev.io/developers/ViewTechOrg" alt="Viewtech Profile on stardev"><img src="https://stardev.io/developers/ViewTechOrg/badge/languages/global.svg"></a></p>
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHFxbXNzeHRzbTk3a2ExYnNhdW9iYzF1bmY2YTEzMzJrdzJqcHZ0aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IXnygGeB6LPPi/giphy.gif" alt="Futuristic Tech Animation" width="600"/>
