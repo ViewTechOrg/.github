@@ -1,8 +1,9 @@
-<p align="center"><a href="https://stardev.io/developers/ViewTechOrg" alt="Viewtech Profile on stardev"><img src="https://stardev.io/developers/ViewTechOrg/badge/languages/global.svg"><br></a></p>
-<!-- <h2 align="center">ViewTech OFFICIAL</h2> -->
+<!-- <p align="center"><a href="https://stardev.io/developers/ViewTechOrg" alt="Viewtech Profile on stardev"><img src="https://stardev.io/developers/ViewTechOrg/badge/languages/global.svg"><br></a></p> -->
+<h2 align="center">ViewTech OFFICIAL</h2>
+<!--
 <hr>
 <p align="center"><a href="https://github.com/ViewTechOrg/" alt="ViewTechOfficial"><img src="https://img.shields.io/badge/%20+%20-our%20social%20media-cyan?style=plastic" width="250"></a><hr><div align="center" style="display: inline-block; padding: 15px 20px; border: 2px solid #444; border-radius: 10px; background-color: #111;"><a href="https://vm.tiktok.com/ZSr3aQB1W/" target="_blank"><img src="https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white" alt="TikTok" width=100></a> <a href="https://www.youtube.com/@ViewTech_Or" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" width=100></a><a href="https://www.instagram.com/viewtech4484/" target="_blank"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white" alt="Instagram" width=102></a></div></p>
-<hr>
+<hr> -->
 
 <p align="center">
   <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHFxbXNzeHRzbTk3a2ExYnNhdW9iYzF1bmY2YTEzMzJrdzJqcHZ0aiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/IXnygGeB6LPPi/giphy.gif" alt="Futuristic Tech Animation" width="600"/>
