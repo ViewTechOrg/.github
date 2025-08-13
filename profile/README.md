@@ -105,12 +105,12 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <!--ORG_STATS_START-->
 - 🔭 **Total Proyek Publik**: 13
 - 👥 **Jumlah Anggota**: 10
-- 🌟 **Total Bintang di Semua Proyek**: 37
+- 🌟 **Total Bintang di Semua Proyek**: 38
 
 ### 🚀 Top 3 Repositori dengan Bintang Terbanyak:
 - [Trust-YourCam](https://github.com/ViewTechOrg/Trust-YourCam) — ⭐ 14
+- [Checker-Scammer](https://github.com/ViewTechOrg/Checker-Scammer) — ⭐ 7
 - [Crack-IG](https://github.com/ViewTechOrg/Crack-IG) — ⭐ 6
-- [Checker-Scammer](https://github.com/ViewTechOrg/Checker-Scammer) — ⭐ 6
 <!--ORG_STATS_END-->
 
 ---
