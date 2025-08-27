@@ -38,8 +38,6 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 ├── 🧑‍💻 <a href="https://github.com/riffvuln">riffvuln</a>
 │   └── <a href="https://github.com/riffvuln"><img src="https://img.shields.io/badge/Rust-000000?style=flat&logo=rust&logoColor=white"></a>
 └── 🎓 Magang
-    ├── <a href="https://github.com/Lubebansokhekel">Lubebansokhekel</a>
-    │   └── <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white"></a>
     ├── <a href="https://github.com/Cyber404119">Cyber404119</a>
     │   └── <a href="https://github.com/Cyber404119"><img src="https://img.shields.io/badge/Bash-4EAA25?style=flat&logo=gnubash&logoColor=white"></a>
     └── <a href="https://github.com/fahadsyihab06">fahadsyihab06</a>
@@ -54,8 +52,8 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
     └── <a href=""><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"></a>
 
 📁 Marketing (ViewTech.Int)
-├── <a href="https://github.com/Lubebansokhekel">Lubebansokhekel</a>
-│   └── <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white"></a> <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white"></a> <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white"></a>
+<!-- ├── <a href="https://github.com/Lubebansokhekel">Lubebanso</a>
+│   └── <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white"></a> <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white"></a> <a href="https://github.com/Lubebansokhekel"><img src="https://img.shields.io/badge/TikTok-000000?style=flat&logo=tiktok&logoColor=white"></a> -->
 ├── <a href="https://github.com/Cyber404119">Cyber404119</a>
 │   └── <a href="https://github.com/Cyber404119"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=flat&logo=whatsapp&logoColor=white"></a> <a href="https://github.com/Cyber404119"><img src="https://img.shields.io/badge/Facebook-1877F2?style=flat&logo=facebook&logoColor=white"></a> <a href="https://github.com/Cyber404119"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white"></a>
 └── <a href="https://github.com/fahadsyihab06">fahadsyihab06</a>
