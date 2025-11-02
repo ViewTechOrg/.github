@@ -82,7 +82,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
     <td>
       <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 15)
       <br>
-      tools hack cam with social enggenering fishing
+      Social Enggenering Toolkit (Hack Cam & Location Tracking with gps)
     </td>
   </tr>
 </table>
