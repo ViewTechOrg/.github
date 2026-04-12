@@ -71,7 +71,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Checker-Scammer" target="_blank"><b>Checker-Scammer</b></a> (⭐ 83)
+      <a href="https://github.com/ViewTechOrg/Checker-Scammer" target="_blank"><b>Checker-Scammer</b></a> (⭐ 84)
       <br>
       a tool that functions to detect scammers based on telephone number analysis from the total number of markers
     </td>
@@ -80,7 +80,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 23)
+      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 24)
       <br>
       Social Enggenering Toolkit (Hack Cam & Location Tracking with gps)
     </td>
@@ -89,7 +89,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 17)
+      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 18)
       <br>
       tools bruteforce instagram account new methode
     </td>
