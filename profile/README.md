@@ -71,7 +71,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Checker-Scammer" target="_blank"><b>Checker-Scammer</b></a> (⭐ 95)
+      <a href="https://github.com/ViewTechOrg/Checker-Scammer" target="_blank"><b>Checker-Scammer</b></a> (⭐ 96)
       <br>
       a tool that functions to detect scammers based on telephone number analysis from the total number of markers
     </td>
@@ -80,7 +80,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 25)
+      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 26)
       <br>
       Social Enggenering Toolkit (Hack Cam & Location Tracking with gps)
     </td>
