@@ -80,7 +80,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 26)
+      <a href="https://github.com/ViewTechOrg/Trust-YourCam" target="_blank"><b>Trust-YourCam</b></a> (⭐ 27)
       <br>
       Social Enggenering Toolkit (Hack Cam & Location Tracking with gps)
     </td>
@@ -89,7 +89,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 21)
+      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 22)
       <br>
       tools bruteforce instagram account new methode
     </td>
