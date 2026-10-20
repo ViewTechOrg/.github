@@ -80,7 +80,7 @@ A cutting‑edge tech org pushing boundaries in **pentesting**, **tooling**, dan
 <table>
   <tr>
     <td>
-      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 24)
+      <a href="https://github.com/ViewTechOrg/Crack-IG" target="_blank"><b>Crack-IG</b></a> (⭐ 25)
       <br>
       tools bruteforce instagram account new methode
     </td>
